@@ -19,7 +19,7 @@ export function ContactSection() {
         <section id="contact" className="mx-auto max-w-5xl px-5 py-12">
             <div className="rounded-[2.5rem] bg-zinc-50 border border-zinc-100 p-8 text-center md:p-16 dark:bg-zinc-900/50 dark:border-zinc-800">
                 <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
-                    Let's Work Together
+                    Let's Work Together.
                 </h2>
                 <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
                     Let&apos;s discuss how we can improve your content.
