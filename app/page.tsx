@@ -12,46 +12,9 @@ import { Mail } from "lucide-react";
 export const metadata: Metadata = {
   title: "Bitikoglu Creative",
   description: "High-retention video editing for YouTube creators. Specializing in pacing, storytelling, and audience engagement.",
-  icons: {
-    icon: "/favicon.png",
-  },
 };
 
-async function getChannel(handle: string): Promise<ChannelData | null> {
-  const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
-
-  try {
-    const res = await fetch(`${baseUrl}/api/channel?handle=${encodeURIComponent(handle)}`, {
-      next: { revalidate: 3600 },
-    });
-
-    if (!res.ok) return null;
-    return res.json();
-  } catch (error) {
-    console.error("Failed to fetch channel data:", error);
-    return null;
-  }
-}
-
-async function getVideo(id: string): Promise<{ views: number | null; likes: number | null } | null> {
-  const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
-
-  try {
-    const res = await fetch(`${baseUrl}/api/video?id=${encodeURIComponent(id)}`, {
-      next: { revalidate: 3600 },
-    });
-
-    if (!res.ok) return null;
-    return res.json();
-  } catch (error) {
-    console.error("Failed to fetch video data:", error);
-    return null;
-  }
-}
+import { fetchChannelData } from "@/lib/youtube";
 
 function formatNumber(n: number | null) {
   if (n === null || n === undefined) return "";
@@ -63,9 +26,9 @@ function formatNumber(n: number | null) {
 
 export default async function Home() {
   const [myChannel, tobi, slickz] = await Promise.all([
-    getChannel("AmiralBitikoglu"),
-    getChannel("tobiteaches"),
-    getChannel("SlickzGames"),
+    fetchChannelData("AmiralBitikoglu"),
+    fetchChannelData("tobiteaches"),
+    fetchChannelData("SlickzGames"),
   ]);
 
   return (

@@ -15,9 +15,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Bitikoglu Creative",
   description: "High-retention video editing services by Taylan Sahan.",
-  icons: {
-    icon: "/favicon.png",
-  },
 };
 
 export default function RootLayout({
