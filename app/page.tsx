@@ -105,7 +105,7 @@ export default async function Home() {
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <ServiceCard
-                title="Talking Head Edits"
+                title="Talking Head"
                 youtubeUrl="https://www.youtube.com/watch?v=O-0xhfeN8ZA"
                 bullets={[
                   "Strategic b-roll usage",
@@ -126,10 +126,10 @@ export default async function Home() {
               />
               <ServiceCard
                 title="Gaming Montages"
-                youtubeUrl="https://www.youtube.com/watch?v=zg5IDpvZUCE"
+                youtubeUrl="https://www.youtube.com/watch?v=B1LG2h981BM"
                 bullets={[
-                  "High-energy transitions",
-                  "Meme integration",
+                  "High-energy pacing",
+                  "Comedy integration",
                   "Perfect sync with music",
                   "Engagement optimization"
                 ]}
