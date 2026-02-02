@@ -45,7 +45,7 @@ export default async function Home() {
 
           {/* Intro Section */}
           <div className="mb-8 grid items-center gap-12 md:grid-cols-2">
-            <div className="space-y-6">
+            <div className="order-2 space-y-6 md:order-1">
               <div className="inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-sm text-zinc-600 dark:border-zinc-800 dark:bg-zinc-900/50 dark:text-zinc-400">
                 <span className="relative flex h-2 w-2 mr-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -76,7 +76,7 @@ export default async function Home() {
             </div>
 
             {/* Right Part: Hero Avatar */}
-            <div className="flex justify-center md:justify-end">
+            <div className="order-1 flex justify-center md:order-2 md:justify-end">
               <div className="group relative aspect-square w-64 rounded-3xl sm:w-80 rotate-3 transition-all duration-500 hover:rotate-0">
                 <img
                   src="/images/avatar-real.PNG"
