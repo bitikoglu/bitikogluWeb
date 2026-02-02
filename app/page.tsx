@@ -12,6 +12,9 @@ import { Mail } from "lucide-react";
 export const metadata: Metadata = {
   title: "Bitikoglu Creative",
   description: "High-retention video editing for YouTube creators. Specializing in pacing, storytelling, and audience engagement.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 async function getChannel(handle: string): Promise<ChannelData | null> {
