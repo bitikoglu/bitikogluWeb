@@ -59,11 +59,11 @@ export default async function Home() {
                   Hi, I&apos;m <NameCycler />
                 </h2>
                 <h1 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl md:text-6xl dark:text-zinc-50">
-                  I craft videos with{" "}
+                  I turn raw footage into{" "}
                   <span className="font-extrabold text-green-600 dark:text-green-400">
                     {myChannel?.views ? formatNumber(myChannel.views) : "8M+"}
                   </span>{" "}
-                  total views.
+                  views.
                 </h1>
               </div>
 
