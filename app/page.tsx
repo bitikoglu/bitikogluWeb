@@ -136,7 +136,7 @@ export default async function Home() {
               />
             </div>
 
-            <div className="mt-12 lg:mt-20">
+            <div className="mt-8 lg:mt-12">
               <ThumbnailService />
             </div>
           </div>

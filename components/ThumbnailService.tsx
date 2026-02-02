@@ -8,7 +8,7 @@ export function ThumbnailService() {
     const [previewOpen, setPreviewOpen] = useState(false);
 
     return (
-        <div id="thumbnails" className="relative overflow-hidden pt-12">
+        <div id="thumbnails" className="relative overflow-hidden pt-4">
             {/* Background decoration */}
             <div className="absolute left-1/2 top-0 -z-10 h-[400px] w-full -translate-x-1/2 bg-gradient-to-b from-red-500/10 to-transparent blur-3xl dark:from-red-500/5"></div>
 
@@ -19,7 +19,7 @@ export function ThumbnailService() {
                         <div className="space-y-4">
                             <div className="inline-flex items-center gap-2 rounded-full bg-red-100 px-3 py-1 text-sm font-medium text-red-600 dark:bg-red-900/30 dark:text-red-400">
                                 <Zap className="h-4 w-4 fill-current" />
-                                <span>Short delivery</span>
+                                <span>Fast Turnaround</span>
                             </div>
                             <h2 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-50">
                                 Thumbnails that <span className="text-red-600">Stop the Scroll</span>
