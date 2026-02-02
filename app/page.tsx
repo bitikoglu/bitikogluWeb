@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ChannelCard } from "@/components/ChannelCard";
 import { ServiceCard } from "@/components/ServiceCard";
+import { ThumbnailService } from "@/components/ThumbnailService";
 import { HeroActions } from "@/components/HeroActions";
 import { ContactSection } from "@/components/ContactSection";
 import { NameCycler } from "@/components/NameCycler";
@@ -11,7 +12,7 @@ import { Mail } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Bitikoglu Creative",
-  description: "High-retention video editing for YouTube creators. Specializing in pacing, storytelling, and audience engagement.",
+  description: "High-retention video editing for YouTube creators.",
 };
 
 import { fetchChannelData } from "@/lib/youtube";
@@ -59,7 +60,7 @@ export default async function Home() {
                 </h2>
                 <h1 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl md:text-6xl dark:text-zinc-50">
                   I make Edits that are watched{" "}
-                  <span className="font-extrabold text-zinc-900 dark:text-white">
+                  <span className="font-extrabold text-green-600 dark:text-green-400">
                     {myChannel?.views ? formatNumber(myChannel.views) : "8M+"}
                   </span>{" "}
                   times.
@@ -133,6 +134,10 @@ export default async function Home() {
                   "Engagement optimization"
                 ]}
               />
+            </div>
+
+            <div className="mt-12 lg:mt-20">
+              <ThumbnailService />
             </div>
           </div>
         </section>

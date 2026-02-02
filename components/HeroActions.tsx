@@ -38,25 +38,21 @@ export function HeroActions() {
                         <Send className="h-5 w-5 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors" />
                         <span className="flex-1 text-left">Telegram: bitikoglu</span>
                     </a>
+                    <a
+                        href="https://discord.com/channels/@me/913495839794679808"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={cn(secondaryBtn, "group relative")}
+                    >
+                        <MessageSquare className="h-5 w-5 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors" />
+                        <span className="flex-1 text-left">Discord: bitikoglu</span>
+                        <ArrowRight className="h-4 w-4 text-zinc-300 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </a>
                     <a href="mailto:amiral@bitikoglu.com" className={cn(secondaryBtn, "group")}>
                         <Mail className="h-5 w-5 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors" />
                         <span className="flex-1 text-left">Email: amiral@bitikoglu.com</span>
                     </a>
-                    <button
-                        onClick={copyDiscord}
-                        className={cn(secondaryBtn, "cursor-pointer group relative")}
-                    >
-                        <MessageSquare className="h-5 w-5 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors" />
-                        <span className="flex-1 text-left">Discord: bitikoglu</span>
-                        {copied ? (
-                            <span className="flex items-center gap-1 text-green-600 dark:text-green-400 text-xs font-bold">
-                                <Check className="h-4 w-4" />
-                                COPIED
-                            </span>
-                        ) : (
-                            <Copy className="h-4 w-4 text-zinc-300 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        )}
-                    </button>
+
 
 
 

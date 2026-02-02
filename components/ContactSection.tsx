@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Send, MessageSquare, Check, Copy } from "lucide-react";
+import { Mail, Send, MessageSquare, Check, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -35,17 +35,10 @@ export function ContactSection() {
                             <p className="text-sm font-bold">@bitikoglu</p>
                         </div>
                     </a>
-                    <a href="mailto:amiral@bitikoglu.com" className={cn(contactBtn, "group")}>
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-50 text-green-600 dark:bg-green-500/10 dark:text-green-400">
-                            <Mail className="h-5 w-5" />
-                        </div>
-                        <div className="text-left">
-                            <p className="text-xs text-zinc-500 dark:text-zinc-400">Email</p>
-                            <p className="text-sm font-bold truncate">amiral@bitikoglu.com</p>
-                        </div>
-                    </a>
-                    <button
-                        onClick={copyDiscord}
+                    <a
+                        href="https://discord.com/channels/@me/913495839794679808"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className={cn(contactBtn, "group relative")}
                     >
                         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400">
@@ -55,12 +48,18 @@ export function ContactSection() {
                             <p className="text-xs text-zinc-500 dark:text-zinc-400">Discord</p>
                             <p className="text-sm font-bold">bitikoglu</p>
                         </div>
-                        {copied ? (
-                            <Check className="h-4 w-4 text-green-600 dark:text-green-400" />
-                        ) : (
-                            <Copy className="h-4 w-4 text-zinc-300 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        )}
-                    </button>
+                        <ArrowRight className="h-4 w-4 text-zinc-300 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                    <a href="mailto:amiral@bitikoglu.com" className={cn(contactBtn, "group")}>
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-50 text-green-600 dark:bg-green-500/10 dark:text-green-400">
+                            <Mail className="h-5 w-5" />
+                        </div>
+                        <div className="text-left">
+                            <p className="text-xs text-zinc-500 dark:text-zinc-400">Email</p>
+                            <p className="text-sm font-bold truncate">amiral@bitikoglu.com</p>
+                        </div>
+                    </a>
+
 
 
                 </div>
