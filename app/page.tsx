@@ -112,7 +112,7 @@ export default async function Home() {
             <div className="flex justify-center md:justify-end">
               <div className="group relative aspect-square w-64 rounded-3xl sm:w-80 rotate-3 transition-all duration-500 hover:rotate-0">
                 <img
-                  src="/images/avatar-real.png"
+                  src="/images/avatar-real.PNG"
                   alt="Taylan Şahan"
                   className="absolute inset-0 h-full w-full object-cover rounded-3xl shadow-2xl ring-1 ring-zinc-900/10 transition-opacity duration-500 group-hover:opacity-0 dark:ring-white/10"
                 />
