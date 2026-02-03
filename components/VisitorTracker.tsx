@@ -8,10 +8,15 @@ export function VisitorTracker() {
         const hasTracked = sessionStorage.getItem("visitor_tracked");
 
         if (!hasTracked) {
+            console.log("Tracking visitor...");
             fetch("/api/notify", { method: "POST" })
-                .then((res) => {
+                .then(async (res) => {
                     if (res.ok) {
+                        console.log("Visitor tracking successful");
                         sessionStorage.setItem("visitor_tracked", "true");
+                    } else {
+                        const errorData = await res.json();
+                        console.error("Visitor tracking failed:", errorData.error);
                     }
                 })
                 .catch((err) => console.error("Tracking error:", err));
