@@ -3,8 +3,9 @@
 import { Mail, Send, MessageSquare, Check, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Dictionary } from "@/get-dictionary";
 
-export function ContactSection() {
+export function ContactSection({ dict }: { dict: Dictionary }) {
     const [copied, setCopied] = useState(false);
 
     const copyDiscord = () => {
@@ -19,10 +20,10 @@ export function ContactSection() {
         <section id="contact" className="mx-auto max-w-5xl px-5 py-12">
             <div className="rounded-[2.5rem] bg-zinc-50 border border-zinc-100 p-8 text-center md:p-16 dark:bg-zinc-900/50 dark:border-zinc-800">
                 <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
-                    Let's Work Together.
+                    {dict.contact.title}
                 </h2>
                 <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
-                    Let&apos;s discuss how we can improve your content.
+                    {dict.contact.subtitle}
                 </p>
 
                 <div className="mt-12 grid gap-4 md:grid-cols-3 max-w-4xl mx-auto">
@@ -59,9 +60,6 @@ export function ContactSection() {
                             <p className="text-sm font-bold truncate">amiral@bitikoglu.com</p>
                         </div>
                     </a>
-
-
-
                 </div>
             </div>
         </section>

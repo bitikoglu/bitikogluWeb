@@ -3,16 +3,18 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { Dictionary, Locale } from "@/get-dictionary";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
-const navItems = [
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Collaborations", href: "#channels" },
-];
-
-export function Header() {
+export function Header({ dict, currentLang }: { dict: Dictionary, currentLang: Locale }) {
     const [logoKey, setLogoKey] = useState(0);
     const [isFalling, setIsFalling] = useState(false);
+
+    const navItems = [
+        { name: dict.nav.about, href: "#about" },
+        { name: dict.nav.services, href: "#services" },
+        { name: dict.nav.collaborations, href: "#channels" },
+    ];
 
     const handleLogoClick = (e: React.MouseEvent) => {
         // Scroll to top
@@ -65,7 +67,7 @@ export function Header() {
                 <nav className="hidden gap-6 text-sm font-medium md:flex">
                     {navItems.map((item) => (
                         <a
-                            key={item.name}
+                            key={item.href}
                             href={item.href}
                             className="text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
                         >
@@ -74,15 +76,18 @@ export function Header() {
                     ))}
                 </nav>
 
-                <a
-                    href="#contact"
-                    className={cn(
-                        "rounded-xl bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90",
-                        "dark:bg-zinc-50 dark:text-zinc-900"
-                    )}
-                >
-                    Get in touch
-                </a>
+                <div className="flex items-center gap-4">
+                    <LanguageSwitcher currentLang={currentLang} />
+                    <a
+                        href="#contact"
+                        className={cn(
+                            "rounded-xl bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90",
+                            "dark:bg-zinc-50 dark:text-zinc-900"
+                        )}
+                    >
+                        {dict.header.getInTouch}
+                    </a>
+                </div>
             </div>
         </header>
     );

@@ -1,0 +1,88 @@
+{
+    "nav": {
+        "about": "About",
+        "services": "Services",
+        "collaborations": "Collaborations"
+    },
+    "header": {
+        "getInTouch": "Get in touch"
+    },
+    "footer": {
+        "rights": "All rights reserved."
+    },
+    "hero": {
+        "available": "Available for hire",
+        "hi": "Hi, I'm",
+        "iTurn": "I turn raw footage into",
+        "views": "views.",
+        "description": "I help creators grow by crafting high-retention videos with perfect pacing and storytelling structure.",
+        "visitChannel": "Visit My Channel",
+        "portfolio": "Check out my Portfolio",
+        "contactMe": "Contact me",
+        "telegram": "Telegram: bitikoglu",
+        "discord": "Discord: bitikoglu",
+        "email": "Email: amiral@bitikoglu.com"
+    },
+    "services": {
+        "title": "Services",
+        "subtitle": "Tailored editing solutions for your content needs.",
+        "talkingHead": {
+            "title": "Talking Head",
+            "bullet1": "Strategic b-roll usage",
+            "bullet2": "Dynamic text overlays",
+            "bullet3": "Retention-based pacing",
+            "bullet4": "Clear audio processing"
+        },
+        "vlog": {
+            "title": "Vlog & Advertisement",
+            "bullet1": "Brand-focused editing",
+            "bullet2": "Cinematic storytelling",
+            "bullet3": "3D Effects",
+            "bullet4": "Professional color grading"
+        },
+        "gaming": {
+            "title": "Gaming Montages",
+            "bullet1": "High-energy pacing",
+            "bullet2": "Comedy integration",
+            "bullet3": "Perfect sync with music",
+            "bullet4": "Engagement optimization"
+        }
+    },
+    "thumbnails": {
+        "fastTurnaround": "Fast Turnaround",
+        "title1": "Thumbnails that",
+        "title2": "Stop the Scroll",
+        "description": "A video is only as good as its first impression. I design high-impact thumbnails engineered for maximum click-through rates using psychological triggers and visual storytelling.",
+        "clickFocused": {
+            "title": "Click-Focused",
+            "desc": "Designed to trigger curiosity and capture immediate attention."
+        },
+        "highCtr": {
+            "title": "High CTR",
+            "desc": "Optimized layout and color theory for the YouTube algorithm."
+        },
+        "bullet1": "High-contrast color grading",
+        "bullet2": "Clear, bold typography",
+        "bullet3": "Psychological storytelling elements",
+        "cta": "Get High-CTR Thumbnails",
+        "markers": {
+            "retention": "High Retention Focus",
+            "click": "Click Trigger",
+            "emotion": "Emotional Capture"
+        },
+        "stats": {
+            "ctrTitle": "Avg. CTR",
+            "growthTitle": "Impression Growth"
+        }
+    },
+    "channels": {
+        "title": "Channels I Work With",
+        "subtitle": "Creators I collaborate with to produce high-impact content.",
+        "tobiDesc": "Educational content requiring clarity and precise pacing.",
+        "slickzDesc": "High-energy gaming content edited for maximum engagement."
+    },
+    "contact": {
+        "title": "Let's Work Together.",
+        "subtitle": "Let's discuss how we can improve your content."
+    }
+}

@@ -1,0 +1,88 @@
+{
+    "nav": {
+        "about": "Hakkımızda",
+        "services": "Hizmetler",
+        "collaborations": "İşbirlikleri"
+    },
+    "header": {
+        "getInTouch": "İletişime Geç"
+    },
+    "footer": {
+        "rights": "Tüm hakları saklıdır."
+    },
+    "hero": {
+        "available": "Tekliflere açık",
+        "hi": "Merhaba, Ben",
+        "iTurn": "Ham Kayıtlarınızı",
+        "views": "izlenmeye dönüştürüyoruz.",
+        "description": "Yoğun tempo ve hikaye anlatımı yapısıyla videolar hazırlayarak içerik üreticilerine destek oluyoruz.",
+        "visitChannel": "Kanalımızı Ziyaret Et",
+        "portfolio": "Portfolyomuzu İncele",
+        "contactMe": "Bizimle iletişime geç",
+        "telegram": "Telegram: bitikoglu",
+        "discord": "Discord: bitikoglu",
+        "email": "E-posta: amiral@bitikoglu.com"
+    },
+    "services": {
+        "title": "Hizmetler",
+        "subtitle": "Size özel kurgu çözümleri.",
+        "talkingHead": {
+            "title": "Konuşan Kafa (Talking Head)",
+            "bullet1": "Stratejik b-roll kullanımı",
+            "bullet2": "Dinamik metin katmanları",
+            "bullet3": "İzleyiciyi yormayan tempo",
+            "bullet4": "Net ses işleme"
+        },
+        "vlog": {
+            "title": "Vlog & Reklam",
+            "bullet1": "Marka odaklı kurgu",
+            "bullet2": "Hikaye anlatımı",
+            "bullet3": "3D Efektler",
+            "bullet4": "Profesyonel renk düzenleme (Color grading)"
+        },
+        "gaming": {
+            "title": "Oyun Montajları",
+            "bullet1": "Yüksek enerjili tempo",
+            "bullet2": "Komedi ve mizah yerleşimleri",
+            "bullet3": "Müzikle senkronizasyon",
+            "bullet4": "Etkileşim odaklı"
+        }
+    },
+    "thumbnails": {
+        "fastTurnaround": "Hızlı Teslimat",
+        "title1": "İlgi çeken",
+        "title2": "Başlık Resimleri",
+        "description": "Bir videonun başarısı ilk izlenime bağlıdır. Görsel hikaye anlatımı kullanarak maksimum tıklanma oranı için tasarlanmış başlık resimleri hazırlıyoruz.",
+        "clickFocused": {
+            "title": "Tıklanma Odaklı",
+            "desc": "Merak uyandırmak ve dikkat çekmek için tasarlanmıştır."
+        },
+        "highCtr": {
+            "title": "Yüksek TO (CTR)",
+            "desc": "YouTube algoritması için optimize edilmiş düzen ve renk teorisi."
+        },
+        "bullet1": "Yüksek kontrastlı renk düzenlemesi",
+        "bullet2": "Net, kalın tipografi",
+        "bullet3": "Hikaye anlatımı unsurları",
+        "cta": "Yüksek Tıklanma Oranlı Başlık Resimleri İçin Bize Ulaşın",
+        "markers": {
+            "retention": "Yüksek İzleyici Tutma",
+            "click": "Tıklama Tetikleyici",
+            "emotion": "Duygusal Yakalama"
+        },
+        "stats": {
+            "ctrTitle": "Ortalama Tıklanma",
+            "growthTitle": "Gösterim Büyümesi"
+        }
+    },
+    "channels": {
+        "title": "Birlikte Çalıştığımız Kanallar",
+        "subtitle": "Hizmet verdiğimiz içerik üreticileri.",
+        "tobiDesc": "Eğitici teknoloji içerikleri.",
+        "slickzDesc": "Kesintisiz oyun kayıtları."
+    },
+    "contact": {
+        "title": "Birlikte Çalışalım.",
+        "subtitle": "Size nasıl yardım edebileceğimizi konuşalım."
+    }
+}

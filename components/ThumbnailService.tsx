@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { Check, MousePointer2, TrendingUp, Zap, ArrowRight, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Dictionary } from "@/get-dictionary";
 
-export function ThumbnailService() {
+export function ThumbnailService({ dict }: { dict: Dictionary }) {
     const [previewOpen, setPreviewOpen] = useState(false);
 
     return (
@@ -19,15 +20,13 @@ export function ThumbnailService() {
                         <div className="space-y-4">
                             <div className="inline-flex items-center gap-2 rounded-full bg-red-100 px-3 py-1 text-sm font-medium text-red-600 dark:bg-red-900/30 dark:text-red-400">
                                 <Zap className="h-4 w-4 fill-current" />
-                                <span>Fast Turnaround</span>
+                                <span>{dict.thumbnails.fastTurnaround}</span>
                             </div>
                             <h2 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-50">
-                                Thumbnails that <span className="text-red-600">Stop the Scroll</span>
+                                {dict.thumbnails.title1} <span className="text-red-600">{dict.thumbnails.title2}</span>
                             </h2>
                             <p className="text-lg text-zinc-600 dark:text-zinc-400">
-                                A video is only as good as its first impression. I design high-impact
-                                thumbnails engineered for maximum click-through rates using psychological
-                                triggers and visual storytelling.
+                                {dict.thumbnails.description}
                             </p>
                         </div>
 
@@ -37,8 +36,8 @@ export function ThumbnailService() {
                                     <MousePointer2 className="h-5 w-5" />
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-zinc-900 dark:text-zinc-50">Click-Focused</h4>
-                                    <p className="text-sm text-zinc-500">Designed to trigger curiosity and capture immediate attention.</p>
+                                    <h4 className="font-semibold text-zinc-900 dark:text-zinc-50">{dict.thumbnails.clickFocused.title}</h4>
+                                    <p className="text-sm text-zinc-500">{dict.thumbnails.clickFocused.desc}</p>
                                 </div>
                             </div>
                             <div className="flex gap-4">
@@ -46,17 +45,17 @@ export function ThumbnailService() {
                                     <TrendingUp className="h-5 w-5" />
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-zinc-900 dark:text-zinc-50">High CTR</h4>
-                                    <p className="text-sm text-zinc-500">Optimized layout and color theory for the YouTube algorithm.</p>
+                                    <h4 className="font-semibold text-zinc-900 dark:text-zinc-50">{dict.thumbnails.highCtr.title}</h4>
+                                    <p className="text-sm text-zinc-500">{dict.thumbnails.highCtr.desc}</p>
                                 </div>
                             </div>
                         </div>
 
                         <ul className="space-y-3">
                             {[
-                                "High-contrast color grading",
-                                "Clear, bold typography",
-                                "Psychological storytelling elements"
+                                dict.thumbnails.bullet1,
+                                dict.thumbnails.bullet2,
+                                dict.thumbnails.bullet3
                             ].map((bullet) => (
                                 <li key={bullet} className="flex items-center gap-3 text-zinc-600 dark:text-zinc-400">
                                     <div className="rounded-full bg-red-100 p-1 text-red-600 dark:bg-red-900/30 dark:text-red-400">
@@ -72,7 +71,7 @@ export function ThumbnailService() {
                                 href="#contact"
                                 className="inline-flex items-center gap-2 rounded-xl bg-red-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-red-700 hover:scale-105 active:scale-95 shadow-lg shadow-red-500/20"
                             >
-                                Get High-CTR Thumbnails
+                                {dict.thumbnails.cta}
                                 <ArrowRight className="h-4 w-4" />
                             </a>
                         </div>
@@ -98,32 +97,32 @@ export function ThumbnailService() {
                                 <div className="absolute left-[20%] top-[30%] opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:-translate-y-2">
                                     <div className="flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-bold text-zinc-900 shadow-xl backdrop-blur-md dark:bg-zinc-900/90 dark:text-zinc-50">
                                         <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
-                                        High Retention Focus
+                                        {dict.thumbnails.markers.retention}
                                     </div>
                                 </div>
 
                                 <div className="absolute right-[15%] bottom-[40%] opacity-0 transition-all duration-500 delay-100 group-hover:opacity-100 group-hover:-translate-y-2">
                                     <div className="flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-bold text-zinc-900 shadow-xl backdrop-blur-md dark:bg-zinc-900/90 dark:text-zinc-50">
                                         <div className="h-2 w-2 rounded-full bg-red-500 animate-pulse"></div>
-                                        Click Trigger
+                                        {dict.thumbnails.markers.click}
                                     </div>
                                 </div>
 
                                 <div className="absolute left-[10%] bottom-[20%] opacity-0 transition-all duration-500 delay-200 group-hover:opacity-100 group-hover:-translate-y-2">
                                     <div className="flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-bold text-zinc-900 shadow-xl backdrop-blur-md dark:bg-zinc-900/90 dark:text-zinc-50">
                                         <div className="h-2 w-2 rounded-full bg-blue-500 animate-pulse"></div>
-                                        Emotional Capture
+                                        {dict.thumbnails.markers.emotion}
                                     </div>
                                 </div>
 
                                 {/* Statistics Overlay - Fake but looks professional */}
                                 <div className="absolute bottom-6 left-6 right-6 flex gap-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                                     <div className="flex-1 rounded-2xl bg-white/90 p-3 shadow-xl backdrop-blur-md dark:bg-zinc-900/90">
-                                        <div className="text-[10px] uppercase tracking-wider text-zinc-500">Avg. CTR</div>
+                                        <div className="text-[10px] uppercase tracking-wider text-zinc-500">{dict.thumbnails.stats.ctrTitle}</div>
                                         <div className="text-xl font-bold text-green-600">+12.4%</div>
                                     </div>
                                     <div className="flex-1 rounded-2xl bg-white/90 p-3 shadow-xl backdrop-blur-md dark:bg-zinc-900/90">
-                                        <div className="text-[10px] uppercase tracking-wider text-zinc-500">Impression Growth</div>
+                                        <div className="text-[10px] uppercase tracking-wider text-zinc-500">{dict.thumbnails.stats.growthTitle}</div>
                                         <div className="text-xl font-bold text-red-600">+45%</div>
                                     </div>
                                 </div>

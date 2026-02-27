@@ -16,6 +16,8 @@ export const metadata: Metadata = {
 };
 
 import { fetchChannelData } from "@/lib/youtube";
+import { getDictionary, Locale } from "@/get-dictionary";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 function formatNumber(n: number | null) {
   if (n === null || n === undefined) return "";
@@ -25,16 +27,24 @@ function formatNumber(n: number | null) {
   return n.toString();
 }
 
-export default async function Home() {
+export default async function Home(
+  props: {
+    params: Promise<{ lang: Locale }>
+  }
+) {
+  const params = await props.params;
+
   const [myChannel, tobi, slickz] = await Promise.all([
     fetchChannelData("AmiralBitikoglu"),
     fetchChannelData("tobiteaches"),
     fetchChannelData("SlickzGames"),
   ]);
 
+  const dict = await getDictionary(params.lang);
+
   return (
     <div className="flex min-h-screen flex-col bg-white dark:bg-zinc-900">
-      <Header />
+      <Header dict={dict} currentLang={params.lang} />
 
       <main className="flex-1">
         {/* Hero */}
@@ -51,28 +61,27 @@ export default async function Home() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
-                Available for hire
+                {dict.hero.available}
               </div>
 
               <div className="space-y-3">
                 <h2 className="text-xl font-medium text-zinc-500 dark:text-zinc-400">
-                  Hi, I&apos;m <NameCycler />
+                  {dict.hero.hi} <NameCycler />
                 </h2>
                 <h1 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl md:text-6xl dark:text-zinc-50">
-                  I turn raw footage into{" "}
+                  {dict.hero.iTurn}{" "}
                   <span className="font-extrabold text-green-600 dark:text-green-400">
                     {myChannel?.views ? formatNumber(myChannel.views) : "8M+"}
                   </span>{" "}
-                  views.
+                  {dict.hero.views}
                 </h1>
               </div>
 
               <p className="text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-                I help creators grow by crafting high-retention videos with perfect pacing
-                and storytelling structure.
+                {dict.hero.description}
               </p>
 
-              <HeroActions />
+              <HeroActions dict={dict} />
             </div>
 
             {/* Right Part: Hero Avatar */}
@@ -85,7 +94,7 @@ export default async function Home() {
                 />
                 <img
                   src="/images/avatar-drawn2.png"
-                  alt="Taylan Şahan Drawn"
+                  alt="Amiral Bitikoglu"
                   className="absolute inset-0 h-full w-full object-cover rounded-3xl shadow-2xl ring-1 ring-zinc-900/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:ring-white/10"
                 />
               </div>
@@ -97,47 +106,47 @@ export default async function Home() {
         <section id="services" className="bg-zinc-50/50 py-6 dark:bg-zinc-900/20">
           <div className="mx-auto max-w-5xl px-5">
             <div className="mb-8">
-              <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">Services</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">{dict.services.title}</h2>
               <p className="mt-2 text-lg text-zinc-600 dark:text-zinc-400">
-                Tailored editing solutions for your content needs.
+                {dict.services.subtitle}
               </p>
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <ServiceCard
-                title="Talking Head"
+                title={dict.services.talkingHead.title}
                 youtubeUrl="https://www.youtube.com/watch?v=O-0xhfeN8ZA"
                 bullets={[
-                  "Strategic b-roll usage",
-                  "Dynamic text overlays",
-                  "Retention-based pacing",
-                  "Clear audio processing"
+                  dict.services.talkingHead.bullet1,
+                  dict.services.talkingHead.bullet2,
+                  dict.services.talkingHead.bullet3,
+                  dict.services.talkingHead.bullet4
                 ]}
               />
               <ServiceCard
-                title="Vlog & Advertisement"
+                title={dict.services.vlog.title}
                 youtubeUrl="https://www.youtube.com/watch?v=n8P9N1gbeJ4"
                 bullets={[
-                  "Brand-focused editing",
-                  "Cinematic storytelling",
-                  "3D Effects",
-                  "Professional color grading"
+                  dict.services.vlog.bullet1,
+                  dict.services.vlog.bullet2,
+                  dict.services.vlog.bullet3,
+                  dict.services.vlog.bullet4
                 ]}
               />
               <ServiceCard
-                title="Gaming Montages"
+                title={dict.services.gaming.title}
                 youtubeUrl="https://www.youtube.com/watch?v=B1LG2h981BM"
                 bullets={[
-                  "High-energy pacing",
-                  "Comedy integration",
-                  "Perfect sync with music",
-                  "Engagement optimization"
+                  dict.services.gaming.bullet1,
+                  dict.services.gaming.bullet2,
+                  dict.services.gaming.bullet3,
+                  dict.services.gaming.bullet4
                 ]}
               />
             </div>
 
             <div className="mt-8 lg:mt-12">
-              <ThumbnailService />
+              <ThumbnailService dict={dict} />
             </div>
           </div>
         </section>
@@ -145,32 +154,32 @@ export default async function Home() {
         {/* Channels */}
         <section id="channels" className="mx-auto max-w-5xl px-5 py-6">
           <div className="mb-8">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">Channels I Work With</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">{dict.channels.title}</h2>
             <p className="mt-2 text-lg text-zinc-600 dark:text-zinc-400">
-              Creators I collaborate with to produce high-impact content.
+              {dict.channels.subtitle}
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             <ChannelCard
               name="Tobi Teaches"
-              desc="Educational content requiring clarity and precise pacing."
+              desc={dict.channels.tobiDesc}
               url="https://www.youtube.com/@tobiteaches"
               data={tobi}
             />
             <ChannelCard
               name="Slickz Games"
-              desc="High-energy gaming content edited for maximum engagement."
+              desc={dict.channels.slickzDesc}
               url="https://www.youtube.com/@SlickzGames"
               data={slickz}
             />
           </div>
         </section>
 
-        <ContactSection />
+        <ContactSection dict={dict} />
       </main>
 
-      <Footer />
+      <Footer dict={dict} />
     </div >
   );
 }
