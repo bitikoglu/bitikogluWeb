@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Send, MessageSquare, Youtube, Check, Copy, ArrowRight } from "lucide-react";
+import { BriefcaseBusiness, Mail, Send, MessageSquare, Youtube, Check, Copy, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Dictionary } from "@/get-dictionary";
@@ -35,6 +35,16 @@ export function HeroActions({ dict }: { dict: Dictionary }) {
                     {dict.hero.contactMe}
                 </p>
                 <div className="flex flex-col gap-1">
+                    <a
+                        href="https://www.upwork.com/freelancers/taylans4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={cn(secondaryBtn, "group")}
+                    >
+                        <BriefcaseBusiness className="h-5 w-5 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors" />
+                        <span className="flex-1 text-left">Upwork: Taylan Şahan</span>
+                        <ArrowRight className="h-4 w-4 text-zinc-300 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </a>
                     <a href="https://t.me/bitikoglu" target="_blank" rel="noopener noreferrer" className={cn(secondaryBtn, "group")}>
                         <Send className="h-5 w-5 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors" />
                         <span className="flex-1 text-left">{dict.hero.telegram}</span>
@@ -51,7 +61,7 @@ export function HeroActions({ dict }: { dict: Dictionary }) {
                     </a>
                     <a href="mailto:amiral@bitikoglu.com" className={cn(secondaryBtn, "group")}>
                         <Mail className="h-5 w-5 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors" />
-                        <span className="flex-1 text-left">{dict.hero.email}</span>
+                        <span className="min-w-0 flex-1 truncate text-left">{dict.hero.email}</span>
                     </a>
                 </div>
             </div>

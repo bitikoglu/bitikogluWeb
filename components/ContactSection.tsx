@@ -55,7 +55,7 @@ export function ContactSection({ dict }: { dict: Dictionary }) {
                         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-50 text-green-600 dark:bg-green-500/10 dark:text-green-400">
                             <Mail className="h-5 w-5" />
                         </div>
-                        <div className="text-left">
+                        <div className="min-w-0 flex-1 text-left">
                             <p className="text-xs text-zinc-500 dark:text-zinc-400">Email</p>
                             <p className="text-sm font-bold truncate">amiral@bitikoglu.com</p>
                         </div>
