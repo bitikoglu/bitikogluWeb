@@ -37,7 +37,7 @@ export default async function Home(
   const [myChannel, tobi, slickz] = await Promise.all([
     fetchChannelData("AmiralBitikoglu"),
     fetchChannelData("tobiteaches"),
-    fetchChannelData("SlickzGames"),
+    fetchChannelData("SlickzHaunts"),
   ]);
 
   const dict = await getDictionary(params.lang);

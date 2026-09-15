@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Send, MessageSquare, Check, ArrowRight } from "lucide-react";
+import { BriefcaseBusiness, Mail, Send, MessageSquare, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Dictionary } from "@/get-dictionary";
@@ -26,7 +26,7 @@ export function ContactSection({ dict }: { dict: Dictionary }) {
                     {dict.contact.subtitle}
                 </p>
 
-                <div className="mt-12 grid gap-4 md:grid-cols-3 max-w-4xl mx-auto">
+                <div className="mx-auto mt-12 grid max-w-5xl gap-4 md:grid-cols-2 lg:grid-cols-4">
                     <a href="https://t.me/bitikoglu" target="_blank" rel="noopener noreferrer" className={cn(contactBtn, "group")}>
                         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400">
                             <Send className="h-5 w-5" />
@@ -58,6 +58,20 @@ export function ContactSection({ dict }: { dict: Dictionary }) {
                         <div className="text-left">
                             <p className="text-xs text-zinc-500 dark:text-zinc-400">Email</p>
                             <p className="text-sm font-bold truncate">amiral@bitikoglu.com</p>
+                        </div>
+                    </a>
+                    <a
+                        href="https://www.upwork.com/freelancers/taylans4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={cn(contactBtn, "group")}
+                    >
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-600 dark:bg-teal-500/10 dark:text-teal-400">
+                            <BriefcaseBusiness className="h-5 w-5" />
+                        </div>
+                        <div className="text-left">
+                            <p className="text-xs text-zinc-500 dark:text-zinc-400">Upwork</p>
+                            <p className="text-sm font-bold">Taylan Şahan</p>
                         </div>
                     </a>
                 </div>
