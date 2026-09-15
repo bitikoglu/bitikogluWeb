@@ -24,28 +24,35 @@
         "email": "Email: amiral@bitikoglu.com"
     },
     "services": {
-        "title": "Services",
-        "subtitle": "Tailored editing solutions for your content needs.",
+        "title": "Hizmetler",
+        "subtitle": "Size özel kurgu çözümleri.",
+        "longForm": {
+            "title": "Uzun Form"
+        },
+        "shortForm": {
+            "title": "Kısa Form",
+            "heading": "Algoritmaya uygun, yüksek performanslı kısa içerikler"
+        },
         "talkingHead": {
-            "title": "Talking Head",
-            "bullet1": "Strategic b-roll usage",
-            "bullet2": "Dynamic text overlays",
-            "bullet3": "Retention-based pacing",
-            "bullet4": "Clear audio processing"
+            "title": "Konuşan Kafa (Talking Head)",
+            "bullet1": "Stratejik b-roll kullanımı",
+            "bullet2": "Dinamik metin katmanları",
+            "bullet3": "İzleyiciyi yormayan tempo",
+            "bullet4": "Net ses işleme"
         },
         "vlog": {
-            "title": "Vlog & Advertisement",
-            "bullet1": "Brand-focused editing",
-            "bullet2": "Cinematic storytelling",
-            "bullet3": "3D Effects",
-            "bullet4": "Professional color grading"
+            "title": "Vlog & Reklam",
+            "bullet1": "Marka odaklı kurgu",
+            "bullet2": "Hikaye anlatımı",
+            "bullet3": "3D Efektler",
+            "bullet4": "Profesyonel renk düzenleme (Color grading)"
         },
         "gaming": {
-            "title": "Gaming Montages",
-            "bullet1": "High-energy pacing",
-            "bullet2": "Comedy integration",
-            "bullet3": "Perfect sync with music",
-            "bullet4": "Engagement optimization"
+            "title": "Oyun Montajları",
+            "bullet1": "Yüksek enerjili tempo",
+            "bullet2": "Komedi ve mizah yerleşimleri",
+            "bullet3": "Müzikle senkronizasyon",
+            "bullet4": "Etkileşim odaklı"
         }
     },
     "thumbnails": {

@@ -6,16 +6,30 @@ interface ServiceCardProps {
     bullets: string[];
     youtubeUrl?: string;
     className?: string;
+    linkLabel?: string;
 }
 
-export function ServiceCard({ title, bullets, youtubeUrl, className }: ServiceCardProps) {
+export function ServiceCard({ title, bullets, youtubeUrl, className, linkLabel }: ServiceCardProps) {
     const getYoutubeId = (url: string) => {
-        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-        const match = url.match(regExp);
-        return (match && match[2].length === 11) ? match[2] : null;
+        const patterns = [
+            /(?:https?:\/\/)?(?:www\.)?youtube\.com\/shorts\/([A-Za-z0-9_-]{11})/i,
+            /(?:https?:\/\/)?(?:www\.)?youtu\.be\/([A-Za-z0-9_-]{11})/i,
+            /(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([A-Za-z0-9_-]{11})/i,
+            /(?:https?:\/\/)?(?:www\.)?youtube\.com\/embed\/([A-Za-z0-9_-]{11})/i,
+            /(?:https?:\/\/)?(?:www\.)?youtube\.com\/v\/([A-Za-z0-9_-]{11})/i,
+            /[?&]v=([A-Za-z0-9_-]{11})/i,
+        ];
+
+        for (const pattern of patterns) {
+            const match = url.match(pattern);
+            if (match?.[1]) return match[1];
+        }
+
+        return null;
     };
 
     const videoId = youtubeUrl ? getYoutubeId(youtubeUrl) : null;
+    const buttonLabel = linkLabel ?? (videoId ? "Watch on YouTube" : "Watch example");
 
     return (
         <div className={cn(
@@ -55,7 +69,7 @@ export function ServiceCard({ title, bullets, youtubeUrl, className }: ServiceCa
                         className="mt-6 flex items-center justify-center gap-2 rounded-xl bg-zinc-900 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 dark:bg-zinc-50 dark:text-zinc-900"
                     >
                         <Youtube className="h-4 w-4" />
-                        Watch on YouTube
+                        {buttonLabel}
                     </a>
                 )}
             </div>

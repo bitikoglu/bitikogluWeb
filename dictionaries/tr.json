@@ -26,6 +26,13 @@
     "services": {
         "title": "Hizmetler",
         "subtitle": "Size özel kurgu çözümleri.",
+        "longForm": {
+            "title": "Long Form"
+        },
+        "shortForm": {
+            "title": "Short Form",
+            "heading": "Algoritmaya uygun, yüksek performanslı kısa içerikler"
+        },
         "talkingHead": {
             "title": "Konuşan Kafa (Talking Head)",
             "bullet1": "Stratejik b-roll kullanımı",

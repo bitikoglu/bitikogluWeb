@@ -112,6 +112,12 @@ export default async function Home(
               </p>
             </div>
 
+            <div className="mb-6">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+                {dict.services.longForm.title}
+              </p>
+            </div>
+
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <ServiceCard
                 title={dict.services.talkingHead.title}
@@ -145,6 +151,50 @@ export default async function Home(
               />
             </div>
 
+            <div className="mt-12">
+              <div className="mb-6">
+                <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+                  {dict.services.shortForm.title}
+                </p>
+                <h3 className="mt-2 text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+                  {dict.services.shortForm.heading}
+                </h3>
+              </div>
+
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <ServiceCard
+                  title="Oyun Kısa Videoları"
+                  youtubeUrl="https://youtube.com/shorts/ogZ20DFQR-M?si=TdsxrROKq6s-qrjl"
+                  linkLabel="İzle"
+                  bullets={[
+                    "İlk saniyede hızlı ve güçlü giriş",
+                    "Yüksek enerji içeren öne çıkan anlar",
+                    "Shorts performansı için izlenme odaklı kesim"
+                  ]}
+                />
+                <ServiceCard
+                  title="Yayın Klibleri"
+                  youtubeUrl="https://www.youtube.com/shorts/s65Gml9QKh4"
+                  linkLabel="İzle"
+                  bullets={[
+                    "Uzun yayınlardan en iyi anların çıkarılması",
+                    "Yeniden izleme değeri için temiz tempo",
+                    "Daha yüksek izlenme ve paylaşım için optimize edildi"
+                  ]}
+                />
+                <ServiceCard
+                  title="ASMR İş Reelsleri"
+                  youtubeUrl="https://www.instagram.com/reel/DdRJJLUAB9g/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA=="
+                  linkLabel="İzle"
+                  bullets={[
+                    "Sakin ve tatmin edici kurgu, sıkı ritim",
+                    "Doğal ses tasarımı ve temiz geçişler",
+                    "Platforma özel etkileşim için ideal"
+                  ]}
+                />
+              </div>
+            </div>
+
             <div className="mt-8 lg:mt-12">
               <ThumbnailService dict={dict} />
             </div>
@@ -168,9 +218,9 @@ export default async function Home(
               data={tobi}
             />
             <ChannelCard
-              name="Slickz Games"
+              name="Slickz Haunts"
               desc={dict.channels.slickzDesc}
-              url="https://www.youtube.com/@SlickzGames"
+              url="https://www.youtube.com/@SlickzHaunts"
               data={slickz}
             />
           </div>
