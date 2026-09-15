@@ -27,12 +27,33 @@
         "title": "Hizmetler",
         "subtitle": "Size özel kurgu çözümleri.",
         "longForm": {
-            "title": "Long Form"
+            "title": "Uzun Form"
         },
         "shortForm": {
-            "title": "Short Form",
-            "heading": "Algoritmaya uygun, yüksek performanslı kısa içerikler"
+            "title": "Kısa Form",
+            "heading": "Algoritmaya uygun, yüksek performanslı kısa içerikler",
+            "watch": "İzle",
+            "gaming": {
+                "title": "Oyun Kısa Videoları",
+                "bullet1": "İlk saniyede hızlı ve güçlü giriş",
+                "bullet2": "Yüksek enerji içeren öne çıkan anlar",
+                "bullet3": "Shorts performansı için izlenme odaklı kesim"
+            },
+            "streamClips": {
+                "title": "Yayın Klipleri",
+                "bullet1": "Uzun yayınlardan en iyi anların çıkarılması",
+                "bullet2": "Yeniden izleme değeri için temiz tempo",
+                "bullet3": "Daha yüksek izlenme ve paylaşım için optimize edildi"
+            },
+            "asmrReels": {
+                "title": "ASMR İş Reelsleri",
+                "bullet1": "Tatmin edici geçişler, sıkı ritim",
+                "bullet2": "Doğal ses tasarımı",
+                "bullet3": "Platforma özel etkileşim için ideal"
+            }
         },
+        "watchYoutube": "YouTube'da İzle",
+        "watchExample": "Örneği İzle",
         "talkingHead": {
             "title": "Konuşan Kafa (Talking Head)",
             "bullet1": "Stratejik b-roll kullanımı",

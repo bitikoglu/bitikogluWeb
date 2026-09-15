@@ -122,6 +122,7 @@ export default async function Home(
               <ServiceCard
                 title={dict.services.talkingHead.title}
                 youtubeUrl="https://www.youtube.com/watch?v=O-0xhfeN8ZA"
+                linkLabel={dict.services.watchYoutube}
                 bullets={[
                   dict.services.talkingHead.bullet1,
                   dict.services.talkingHead.bullet2,
@@ -132,6 +133,7 @@ export default async function Home(
               <ServiceCard
                 title={dict.services.vlog.title}
                 youtubeUrl="https://www.youtube.com/watch?v=n8P9N1gbeJ4"
+                linkLabel={dict.services.watchYoutube}
                 bullets={[
                   dict.services.vlog.bullet1,
                   dict.services.vlog.bullet2,
@@ -142,6 +144,7 @@ export default async function Home(
               <ServiceCard
                 title={dict.services.gaming.title}
                 youtubeUrl="https://www.youtube.com/watch?v=B1LG2h981BM"
+                linkLabel={dict.services.watchYoutube}
                 bullets={[
                   dict.services.gaming.bullet1,
                   dict.services.gaming.bullet2,
@@ -163,33 +166,33 @@ export default async function Home(
 
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <ServiceCard
-                  title="Oyun Kısa Videoları"
+                  title={dict.services.shortForm.gaming.title}
                   youtubeUrl="https://youtube.com/shorts/ogZ20DFQR-M?si=TdsxrROKq6s-qrjl"
-                  linkLabel="İzle"
+                  linkLabel={dict.services.shortForm.watch}
                   bullets={[
-                    "İlk saniyede hızlı ve güçlü giriş",
-                    "Yüksek enerji içeren öne çıkan anlar",
-                    "Shorts performansı için izlenme odaklı kesim"
+                    dict.services.shortForm.gaming.bullet1,
+                    dict.services.shortForm.gaming.bullet2,
+                    dict.services.shortForm.gaming.bullet3
                   ]}
                 />
                 <ServiceCard
-                  title="Yayın Klibleri"
+                  title={dict.services.shortForm.streamClips.title}
                   youtubeUrl="https://www.youtube.com/shorts/s65Gml9QKh4"
-                  linkLabel="İzle"
+                  linkLabel={dict.services.shortForm.watch}
                   bullets={[
-                    "Uzun yayınlardan en iyi anların çıkarılması",
-                    "Yeniden izleme değeri için temiz tempo",
-                    "Daha yüksek izlenme ve paylaşım için optimize edildi"
+                    dict.services.shortForm.streamClips.bullet1,
+                    dict.services.shortForm.streamClips.bullet2,
+                    dict.services.shortForm.streamClips.bullet3
                   ]}
                 />
                 <ServiceCard
-                  title="ASMR İş Reelsleri"
+                  title={dict.services.shortForm.asmrReels.title}
                   youtubeUrl="https://www.instagram.com/reel/DdRJJLUAB9g/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA=="
-                  linkLabel="İzle"
+                  linkLabel={dict.services.shortForm.watch}
                   bullets={[
-                    "Sakin ve tatmin edici kurgu, sıkı ritim",
-                    "Doğal ses tasarımı ve temiz geçişler",
-                    "Platforma özel etkileşim için ideal"
+                    dict.services.shortForm.asmrReels.bullet1,
+                    dict.services.shortForm.asmrReels.bullet2,
+                    dict.services.shortForm.asmrReels.bullet3
                   ]}
                 />
               </div>
